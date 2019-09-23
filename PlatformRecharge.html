@@ -50,7 +50,11 @@
     <link rel="stylesheet" type="text/css" href="https://m.yuzhua.com/mt/mtcdn/161f6e76767913704133.css">
     <link rel="stylesheet" type="text/css" href="https://m.yuzhua.com/mt/mtcdn/588766ac0a19935c601d.css">
     <link rel="stylesheet" type="text/css" href="https://m.yuzhua.com/mt/mtcdn/c5823e785b148ea27923.css"></head>
-  
+    <style>
+        .hide{
+          display: none;
+        }
+    </style>
   <body style="overflow: auto;" class="">
     <div id="__nuxt">
       <!---->
@@ -63,12 +67,12 @@
                 <p data-v-9ba415d6="" data-table-cell="">平台充值</p></div>
             </header>
             <div data-v-aeabf80e="" data-tabs="">
-              <div data-v-aeabf80e="" data-tab-counter="" data-table="" class="tab">
+              <div data-v-aeabf80e="" data-tab-counter="" data-table="" index="0" class="tab tab1">
                 <p data-v-aeabf80e="" data-table-cell="">线下转账</p></div>
-              <div data-v-aeabf80e="" data-tab-alipay="" data-table="" class="">
+              <div data-v-aeabf80e="" data-tab-alipay="" data-table="" index="1" class="tab1">
                 <p data-v-aeabf80e="" data-table-cell="">支付宝</p></div>
             </div>
-            <div data-v-aeabf80e="" data-corporate-account="">
+            <div class="hide" style='display: block'  data-v-aeabf80e="" data-corporate-account="">
               <div data-v-aeabf80e="" data-ca-info="">开户银行：
                 <i data-v-aeabf80e="" data-ca-val="">中国工商银行</i></div>
               <div data-v-aeabf80e="" data-ca-info="">账号户名：
@@ -76,8 +80,19 @@
               <div data-v-aeabf80e="" data-ca-info="">开户地区：
                 <i data-v-aeabf80e="" data-ca-val="">成都春熙路支行</i></div>
               <div data-v-aeabf80e="" data-ca-info="">银行账号：
-                <i data-v-aeabf80e="" data-ca-val="" data-account="">4402 2090 0906 6387 079</i>
-                <i data-v-aeabf80e="" data-copy="" class="copyBankAccount">复制</i></div>
+                <i data-v-aeabf80e="" data-ca-val="" id="text1" data-account="">4402 2090 0906 6387 079</i>
+                <i data-v-aeabf80e="" data-copy="" class="copyBankAccount1">复制</i></div>
+            </div>
+            <div class="hide"  data-v-aeabf80e="" data-corporate-account="">
+              <div data-v-aeabf80e="" data-ca-info="">开户银行1：
+                <i data-v-aeabf80e="" data-ca-val="">中国工商银行1</i></div>
+              <div data-v-aeabf80e="" data-ca-info="">账号户名1：
+                <i data-v-aeabf80e="" data-ca-val="">四川鱼爪新媒网络科技有限公司1</i></div>
+              <div data-v-aeabf80e="" data-ca-info="">开户地区1：
+                <i data-v-aeabf80e="" data-ca-val="">成都春熙路支行1</i></div>
+              <div data-v-aeabf80e="" data-ca-info="">银行账号1：
+                <i data-v-aeabf80e="" data-ca-val="" id="text" data-account="">123456789</i>
+                <i data-v-aeabf80e="" data-copy=""  class="copyBankAccount">复制</i></div>
             </div>
             <p data-v-aeabf80e="" data-recharge-account="">充值帐号：
               <i data-v-aeabf80e="" data-ra-val="">15529251016</i></p>
@@ -102,6 +117,56 @@
           <span class="x-button__text">去实名</span></button>
       </div>
     </div>
+    <div class="success" style='display: none;padding:5px 8px;background-color: rgba(0,0,0,0.5);color: #fff;position:fixed;left:50%;top:50%;transform: translate(-50%,-50%);font-size: 14px;border-radius: 10px;'>复制成功</div>
   </body>
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>
+    $(".tab1").click(function(){
+      $(".tab1").removeClass("tab");
+      $(this).addClass("tab");
+      $('.hide').hide();
+      var index=Number($(this).attr('index'));
+      $(".hide").eq(index).show();    
+    })
+    function copy(value){
+      var currentFocus = document.activeElement;// 保存当前活动节点
+      let input = document.createElement('input');// 创建一个input标签
+      document.body.appendChild(input);// 把标签添加给body
+      input.style.opacity = 0;//设置input标签设置为透明(不可见)
+      input.value = value;// 把需要复制的值放到input上
 
+      // 记录当前滚动位置, 因为添加节点并选中的时候回影响页面滚动
+      let scrollY = window.scrollY;
+
+      input.focus();// input节点获取焦点
+      input.setSelectionRange(0, input.value.length);// 选中input框中的所有文字
+
+      var res = document.execCommand('copy', true);// 复制文字并获取结果
+
+      currentFocus.focus();// 之前活动节点获得焦点
+      document.body.removeChild(input);// 删除添加的input节点
+
+      // 页面滚动到之前位置
+      window.scrollTo(0, scrollY);
+      $(".success").fadeIn();
+      var n=0
+      setTimeout(function(){
+        n++;
+        if(n==1){
+           $(".success").fadeOut();
+        }
+      },1000)
+      
+      return res;// 返回操作结果
+    }
+    $(".copyBankAccount").click(function(){
+      var text=$("#text").text();
+      copy(text)
+    })
+
+   $(".copyBankAccount1").click(function(){
+      var text=$("#text1").text();
+      copy(text)
+    })
+  </script>
 </html>
