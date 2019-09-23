@@ -1,0 +1,112 @@
+.contract-body {
+	background-color:#f1f3f7
+}
+.contract-body__empty {
+	padding-top:16.1031vw;
+	color:#787a80;
+	font-size:3.8647vw;
+	text-align:center;
+	content:"viewport-units-buggyfill";
+	padding-top:16.1031vw;
+	font-size:3.8647vw;
+}
+.contract-body__empty img {
+	width:46.0548vw;
+	height:37.1176vw;
+	margin-bottom:5.6361vw;
+	content:"viewport-units-buggyfill";
+	width:46.0548vw;
+	height:37.1176vw;
+	margin-bottom:5.6361vw;
+}
+.contract .x-contract {
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:100%;
+	padding:4.8309vw 4.8309vw 2.4155vw;
+	margin-bottom:2.4155vw;
+	background-color:#fff;
+	content:"viewport-units-buggyfill";
+	padding:4.8309vw 4.8309vw 2.4155vw;
+	margin-bottom:2.4155vw;
+}
+.contract .x-contract__header {
+	margin-bottom:1.6103vw;
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-pack:justify;
+	-ms-flex-pack:justify;
+	justify-content:space-between;
+	content:"viewport-units-buggyfill";
+	margin-bottom:1.6103vw;
+}
+.contract .x-contract__header span:first-child {
+	font-size:3.8647vw;
+	color:#303133;
+	font-weight:700;
+	content:"viewport-units-buggyfill";
+	font-size:3.8647vw;
+}
+.contract .x-contract__header span:nth-child(2) {
+	font-size:2.8986vw;
+	color:#adaeb2;
+	content:"viewport-units-buggyfill";
+	font-size:2.8986vw;
+}
+.contract .x-contract__body {
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+	-ms-flex-direction:column;
+	flex-direction:column
+}
+.contract .x-contract__status {
+	font-size:2.8986vw;
+	color:#616266;
+	padding-bottom:6.4412vw;
+	margin-bottom:2.4155vw;
+	content:"viewport-units-buggyfill";
+	font-size:2.8986vw;
+	padding-bottom:6.4412vw;
+	margin-bottom:2.4155vw;
+}
+.contract .x-contract__control {
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-pack:end;
+	-ms-flex-pack:end;
+	justify-content:flex-end
+}
+.contract .x-contract__control .x-button {
+	margin-left:1.2077vw;
+	min-width:19.3237vw;
+	height:7.7295vw;
+	border-radius:3.8647vw;
+	line-height:7.7295vw;
+	border-color:#aaa3cc;
+	font-size:3.8647vw;
+	color:#aaa3cc;
+	content:"viewport-units-buggyfill";
+	margin-left:1.2077vw;
+	min-width:19.3237vw;
+	height:7.7295vw;
+	border-radius:3.8647vw;
+	line-height:7.7295vw;
+	font-size:3.8647vw;
+}
+.contract .x-contract__control .x-button--primary {
+	background-image:-webkit-gradient(linear,left top,right top,from(#935bc6),to(#6548a5)),-webkit-gradient(linear,left top,left bottom,from(#da5783),to(#da5783));
+	background-image:linear-gradient(90deg,#935bc6,#6548a5),linear-gradient(#da5783,#da5783);
+	background-blend-mode:normal,normal;
+	-webkit-box-shadow:0 1.4493vw 2.4155vw 0 rgba(73,46,153,.2);
+	box-shadow:0 1.4493vw 2.4155vw 0 rgba(73,46,153,.2);
+	border-color:transparent;
+	color:#fff;
+	content:"viewport-units-buggyfill";
+	-webkit-box-shadow:0px 1.4493vw 2.4155vw 0px rgba(73,46,153,.2);
+	box-shadow:0px 1.4493vw 2.4155vw 0px rgba(73,46,153,.2);
+}
